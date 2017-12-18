@@ -16,7 +16,7 @@ class Counter extends Component {
     }
 
     static propTypes = {
-        value: PropTypes.number.isRequired,
+        count: PropTypes.number.isRequired,
         onIncrement: PropTypes.func.isRequired,
         onDecrement: PropTypes.func.isRequired,
         onReset: PropTypes.func.isRequired,
@@ -29,6 +29,22 @@ class Counter extends Component {
     updateCounter(count) {
         this.setState({count: this.state.count + count});
     }     
+
+    getCount(){
+        this.setState({
+            count: this.state.count
+        })
+    }
+
+    componentWillMount() {
+        this.getCount(); 
+        this.state.count();
+    }
+
+    componentDidMount() {
+        this.getCount();
+        this.state.count();
+    }
 
 
 render () { 
@@ -57,6 +73,8 @@ render () {
         </div>
         );
     }
+
+
 };
 
 export default Counter;
