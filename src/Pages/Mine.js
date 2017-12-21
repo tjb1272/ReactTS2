@@ -1,15 +1,63 @@
-import React from 'react'
+import React, { Component } from 'react'
+     
+class Search extends Component {
+    constructor (props) {
+        super(props)
+        this.state = {repos: null }
+    } 
+     
+    getRepos(searchValue) {
 
-class Mine extends React.Component {
+      let url = `https://api.github.com/search/repositories?q=${searchValue}&language=javascript`
+      console.log(url)
+        fetch(url).then( (response) => {
+          return response.json();
+        }).then((results) => {
+          if(results.items !== undefined){
+            console.log(results.items)
+            let items = results.items;         
+            this.setState({ repos: items })
+            }
+          });
+        
+        }
 
-    render ()
-    {
+      handleSubmit(event) {
+        event.preventDefault();
+        this.props.onSubmit(this.props.id, this.props.repos);
+      }
+
+    render () {
         return (
-            <div>
-        <h4>Here are all of your Repositories...</h4>
+          <div>
+             <form className='text' onSubmit={this.handleSubmit}>
+             <input
+             id='username'
+             placeholder='github username'
+             value={this.state.username}
+             type='text'
+           />
+           {' '}
+           <button
+             className='button'
+             type='submit'
+           >
+             Submit
+           </button>
+             </form> 
+             {' '}
+            <ul>
+               {this.state.items.map((items) => (
+              <li>
+              {repos.items}
+              </li>
+                ))}
 
-        </div>
-        );
-    }
-    }
-    export default Mine;
+            </ul>
+          </div>
+        )
+      } 
+    };
+  
+    
+export default Search;
