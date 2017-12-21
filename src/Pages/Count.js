@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import Header from '../Components/Header'
+// import PropTypes from 'prop-types'
     
 class Counter extends Component {
     constructor() {
@@ -12,19 +11,18 @@ class Counter extends Component {
         this.decrement5Counter = this.updateCounter.bind(this, -5);
         this.increment10Counter = this.updateCounter.bind(this, 10);
         this.decrement10Counter = this.updateCounter.bind(this, -10);
-        this.reset = this.updateCounter.bind(this, this.state);
     }
 
-    static propTypes = {
-        count: PropTypes.number.isRequired,
-        onIncrement: PropTypes.func.isRequired,
-        onDecrement: PropTypes.func.isRequired,
-        onReset: PropTypes.func.isRequired,
-        onIncrement5: PropTypes.func.isRequired,
-        onDecrement5: PropTypes.func.isRequired,
-        onIncrement10: PropTypes.func.isRequired,
-        onDecrement10: PropTypes.func.isRequired
-      }
+    // static propTypes = {
+    //     count: PropTypes.number.isRequired,
+    //     onIncrement: PropTypes.func.isRequired,
+    //     onDecrement: PropTypes.func.isRequired,
+    //     onReset: PropTypes.func.isRequired,
+    //     onIncrement5: PropTypes.func.isRequired,
+    //     onDecrement5: PropTypes.func.isRequired,
+    //     onIncrement10: PropTypes.func.isRequired,
+    //     onDecrement10: PropTypes.func.isRequired
+    //   }
 
     updateCounter(count) {
         this.setState({count: this.state.count + count});
@@ -38,12 +36,12 @@ class Counter extends Component {
 
     componentWillMount() {
         this.getCount(); 
-        this.state.count();
+        // this.state.count();
     }
 
     componentDidMount() {
         this.getCount();
-        this.state.count();
+        // this.state.count();
     }
 
 
@@ -51,7 +49,7 @@ render () {
     return (
 
         <div className='Counter'>
-                <h4><Header title='Counter' /></h4>
+                <h4>Follow Our Count</h4>
             <h3>By the Count of One</h3>
                 {' '}
                 <input type='button' value=' + 1 ' onClick={ this.incrementCounter } />
@@ -66,8 +64,6 @@ render () {
                 {' '}
                 <input type='button' value='+ 10' onClick={ this.increment10Counter } />
                 <input type='button' value='- 10' onClick={ this.decrement10Counter } />
-                {' '}
-                <input type='button' value='+ 10' onClick={ this.reset } />
                 {' '}
             <h3>Clicked: {this.state.count} Times</h3>  
         </div>
