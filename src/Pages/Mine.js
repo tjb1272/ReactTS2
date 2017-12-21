@@ -1,6 +1,15 @@
 import React from 'react'
-import Header from '../Components/Header'
 
-const Mine = () => <h4><Header title='Mine' /></h4>
+class Mine extends React.Component {
 
-export default Mine;
+    render ()
+    {
+        return (
+            <div>
+        <h4>Here are all of your Repositories...</h4>
+
+        </div>
+        );
+    }
+    }
+    export default Mine;
