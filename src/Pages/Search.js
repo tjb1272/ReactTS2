@@ -1,61 +1,63 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
      
 class Search extends Component {
-  constructor (props) {
-    super(props)
-    this.state = { repos: [] }
-  }
+  state={ repos: [] }
      
-    getRepos(searchValue) {
-
+    getRepos = (searchValue) => {
+        console.log(searchValue);
+        console.log('im alive');
       let url = `https://api.github.com/search/repositories?q=${searchValue}&language=javascript`
       console.log(url)
-        fetch(url).then( (response) => {
+        fetch(url).then((response) => {
           return response.json();
         }).then((results) => {
-          if(results.items != undefined){
+          if(results.items !== undefined){
             console.log(results.items)
-            let items = results.items   
+            let items = results.items
             this.setState({ repos: items })
             }
           });
-        
         }
 
-      handleSubmit(event) {
-        event.preventDefault();
-        this.props.onSubmit(this.props.id, this.props.repos);
-      }
 
     render () {
         return (
           <div>
-             <form className='text' onSubmit={this.handleSubmit}>
              <input
              id='username'
              placeholder='github username'
-             value={this.state.username}
+             value={ this.state.username }
              type='text'
            />
            {' '}
            <button
              className='button'
-             type='submit'
+             onClick={ this.getRepos }
            >
              Submit
            </button>
-             </form> 
              {' '}
-            <ul>
-               {this.state.repos.map(i => {
-              return <li>{this.state.repos.items}</li>
-               })} 
-            </ul>
-          </div>
-        )
-      } 
-    };
-  
+
+<h4>Repositories:</h4>
+<table>
+  <tbody>
+    <tr>
+      <th>Repo id</th>
+      <th>Repo Name</th>
+      <th>Repo URL</th>
+    </tr>
+      {this.state.repos.map(function(repos) {
+        return (
+          <tr>
+            <td >{ repos.id }</td>
+            <td >{ repos.name }</td>
+            <td >{ repos.html_url } </td>
+          </tr>)
+        })}
+      </tbody>
+    </table>
+  </div>
+  )} 
+};
     
 export default Search;
