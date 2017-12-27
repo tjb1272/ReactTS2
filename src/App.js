@@ -5,8 +5,6 @@ import Search from './Pages/Search'
 import Mine from './Pages/Mine'
 import Count from './Pages/Count'
 import Nav from './Components/Nav'
-// import Counter from './Components/Counter'
-
 
 class App extends React.Component {
   render() {
@@ -15,17 +13,15 @@ class App extends React.Component {
         <div>
           <Nav />
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/search" component={Search} />
-            <Route path="/mine" component={Mine} />
-            <Route path="/count" component={Count} />
+            <Route exact path="/" component={ Home } />
+            <Route path="/search" component={ Search } />
+            <Route path="/mine" component={ Mine } />
+            <Route path="/count" component={ Count } />
           </Switch>
-
           </div>
       </Router>
           );
   }
 }
-
 
 export default App;
