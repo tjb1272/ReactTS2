@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-// import PropTypes from 'prop-types'
-    
+
 class Counter extends Component {
     constructor() {
         super();
@@ -12,17 +11,6 @@ class Counter extends Component {
         this.increment10Counter = this.updateCounter.bind(this, 10);
         this.decrement10Counter = this.updateCounter.bind(this, -10);
     }
-
-    // static propTypes = {
-    //     count: PropTypes.number.isRequired,
-    //     onIncrement: PropTypes.func.isRequired,
-    //     onDecrement: PropTypes.func.isRequired,
-    //     onReset: PropTypes.func.isRequired,
-    //     onIncrement5: PropTypes.func.isRequired,
-    //     onDecrement5: PropTypes.func.isRequired,
-    //     onIncrement10: PropTypes.func.isRequired,
-    //     onDecrement10: PropTypes.func.isRequired
-    //   }
 
     updateCounter(count) {
         this.setState({count: this.state.count + count});
@@ -36,14 +24,11 @@ class Counter extends Component {
 
     componentWillMount() {
         this.getCount(); 
-        // this.state.count();
     }
 
     componentDidMount() {
         this.getCount();
-        // this.state.count();
     }
-
 
 render () { 
     return (
@@ -69,8 +54,6 @@ render () {
         </div>
         );
     }
-
-
 };
 
 export default Counter;
