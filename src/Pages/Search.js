@@ -38,11 +38,11 @@ class Search extends Component {
            </button>
              {' '}
 
-<h4>Repositories:</h4>
+<h2>Repositories:</h2>
 <table>
   <tbody>
     <tr>
-      <th>Repo id</th>
+      <th>Repo Id</th>
       <th>Repo Name</th>
       <th>Repo URL</th>
     </tr>
@@ -51,7 +51,7 @@ class Search extends Component {
           <tr>
             <td >{ repos.id }</td>
             <td >{ repos.name }</td>
-            <td >{ repos.html_url } </td>
+            <td >{ repos.html_url }</td>
           </tr>)
         })}
       </tbody>
@@ -61,3 +61,6 @@ class Search extends Component {
 };
     
 export default Search;
+
+
+
