@@ -6,9 +6,11 @@ class Mine extends React.Component {
     {
         return (
         <div>
-            <h4>Hello There</h4>
+            <h2>Hello There</h2>
+            <p>This page said Mine! Not Yours....</p>
         </div>
         );
     }
     }
     export default Mine;
+    
