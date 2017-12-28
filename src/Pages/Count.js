@@ -34,8 +34,9 @@ render () {
     return (
 
         <div className='Counter'>
-                <h4>Follow Our Count</h4>
+                <h2>Follow Our Count</h2>
             <h3>By the Count of One</h3>
+            <div>
                 {' '}
                 <input type='button' value=' + 1 ' onClick={ this.incrementCounter } />
                 <input type='button' value=' - 1 ' onClick={ this.decrementCounter } />
@@ -50,7 +51,9 @@ render () {
                 <input type='button' value='+ 10' onClick={ this.increment10Counter } />
                 <input type='button' value='- 10' onClick={ this.decrement10Counter } />
                 {' '}
-            <h3>Clicked: {this.state.count} Times</h3>  
+                </div>
+                <p></p>
+            <h2>Clicked: {this.state.count} Times</h2>  
         </div>
         );
     }
