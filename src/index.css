@@ -1,27 +1,14 @@
-h3 {
-    margin-left: 50px;
-    color: rgba(42, 72, 156, 0.993);
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-h2 {
-    margin-left: 50px;
-    color: rgba(253, 152, 21, 0.993);
-    font-family: Arial, Helvetica, sans-serif;
-}
-h4 {
-    text-align: center;
-    color: rgba(42, 72, 156, 0.993);
-    font-family: Arial, Helvetica, sans-serif;
-}
-input {
-    margin-left: 50px;
+body {
+    background-color: #f3f3f3
 }
 ul {
     padding: 0;
-  }
+    padding-bottom: 15px;
+}
 li {
     list-style-type: none;
+    font-weight: 800;
+    font-family: 'Russo One', sans-serif;
 }
 .active {
     font-weight: bold;
@@ -40,4 +27,65 @@ li {
 }
 .nav li:active {
     transform: translateY(1px);
+}
+h3 {
+    margin-left: 125px;
+    color: rgba(42, 72, 156, 0.993);
+    font-family: 'Acme', sans-serif;
+}
+h2 {
+    padding-top: 25px;
+    text-align: center;
+    color: #5c1702fd;
+    font-family: 'Comfortaa', cursive;
+    margin-left: 10px;
+    margin-top: -15px;
+    text-shadow: 1px 1px #990a05;
+    font-style: italic;
+    font-weight: 900;
+    font-variant: small-caps;
+}
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #5c1702fd;
+}
+input {
+    background-color: rgb(255, 254, 254);
+    color: rgb(92, 3, 3);
+    font-weight: 900;
+    margin-left: 150px;  width: 250px;
+    -moz-border-radius: 15px; 
+    -webkit-border-radius: 15px;
+    -khtml-border-radius: 15px;
+    border-radius: 15px;
+    border:1px #000 solid;
+    padding: 5px 5px 5px 25px;
+}
+button {
+    width: 200px;
+    background-color: #870D02;
+    color: white;
+    font-weight: 900;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    border:1px #000 solid;
+    padding: 5px 5px 5px 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+th {
+    text-align: center;
+    padding: 10px;
+    padding-left: 15px;
+    font-family: 'Comfortaa', cursive;
+    text-decoration: underline;
+}
+td {
+    padding-bottom: 10px;
+    padding-left: 15px;
+    font-family: 'Comfortaa', cursive;
 }
