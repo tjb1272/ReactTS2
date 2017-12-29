@@ -31,13 +31,13 @@ li {
 h3 {
     margin-left: 125px;
     color: rgba(42, 72, 156, 0.993);
-    font-family: 'Acme', sans-serif;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 h2 {
     padding-top: 25px;
     text-align: center;
     color: #5c1702fd;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
     margin-left: 10px;
     margin-top: -15px;
     text-shadow: 1px 1px #990a05;
@@ -49,6 +49,7 @@ p {
     text-align: center;
     font-size: 18px;
     color: #5c1702fd;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 input {
     background-color: rgb(255, 254, 254);
@@ -88,4 +89,8 @@ td {
     padding-bottom: 10px;
     padding-left: 15px;
     font-family: 'Comfortaa', cursive;
+}
+img {
+    width: auto;
+    padding-left: 300px;
 }
